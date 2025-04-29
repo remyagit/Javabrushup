@@ -1,5 +1,8 @@
 package interviewReview;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Basics extends BaseParent implements basicInterface {
 	
 	/**
@@ -55,6 +58,12 @@ public class Basics extends BaseParent implements basicInterface {
 	    
 	    System.out.println("*************************");
 	    b.findDuplicateWords("I am counting string in a sentence in a ");
+	    
+	    System.out.println("*************************");
+	   // b.wordcount();
+	    
+	    System.out.println("*************************");
+		   b.missingnumberinarray();
 	}
 
 	private int sumofarray() {
@@ -107,7 +116,7 @@ public class Basics extends BaseParent implements basicInterface {
 		
 	
 	}
-
+ 
 	@Override
 	public void swapwithouttemp() {
 		
@@ -277,4 +286,55 @@ public class Basics extends BaseParent implements basicInterface {
 		
 	}
 	
-}
+	/*public void wordcount() {
+		
+		String s = "This is automation code and mobile code and automation api code";
+		        String words[] = s.split ("");
+		        
+		        Map<String,Integer> count = new HashMap<String,Integer>();
+		        
+		        
+		        for (String w : words)
+		        {
+		            
+		            if (count.containsKey(w)){
+		                
+		                
+		                count.put(w,count.get(w)+1);
+		            }
+		            
+		            else {
+		                
+		                count.put(w,1);
+		            }
+		            for (String word : count.keySet()){
+			            System.out.println(word+ " "+count.get(w));
+		        }
+		        
+		        
+		        }
+		        
+		    }*/
+	
+	public void missingnumberinarray() {
+		
+		int a[] =  {1,2,4,5};
+		
+		int sum1 = 0;
+		for(int i=0;i<a.length;i++) {
+			
+			sum1 = sum1+a[i];
+		}
+		int sum2 = 0;
+		for(int i=1;i<=5;i++) {
+			
+			sum2 = sum2+i;
+		}
+		
+		System.out.println("Missing number is :" +(sum2-sum1));
+	}
+	
+	
+	
+	}
+
